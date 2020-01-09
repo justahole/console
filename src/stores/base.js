@@ -103,6 +103,7 @@ export default class BaseStore {
   } = {}) {
     this.list.isLoading = true
 
+    const pagingLimit = limit === Infinity ? -1 : limit
     const params = {}
 
     if (!isEmpty(resources)) {
@@ -113,9 +114,7 @@ export default class BaseStore {
       params.conditions = conditions || getFilterString(filters)
     }
 
-    if (limit !== Infinity) {
-      params.paging = `limit=${limit || 10},page=${page || 1}`
-    }
+    params.paging = `limit=${pagingLimit || 10},page=${page || 1}`
 
     if (order) {
       params.orderBy = order
