@@ -249,7 +249,7 @@ export default class CustomMonitoringTemplate {
     const monitor = new GraphMonitor({
       id: this.uidFactory.generateUID(),
       type: 'graph',
-      title: '',
+      title: 'Graph Name',
       lines,
       bars,
       description: '',

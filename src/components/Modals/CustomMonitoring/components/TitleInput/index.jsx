@@ -21,7 +21,13 @@ import { Input } from '@pitrix/lego-ui'
 import classnames from 'classnames'
 import styles from './index.scss'
 
-export default function TitleInput({ title, isEditing, onChange, theme }) {
+export default function TitleInput({
+  title,
+  isEditing,
+  onChange,
+  theme,
+  placeholder,
+}) {
   return (
     <div
       className={classnames(styles.wrapper, {
@@ -29,7 +35,7 @@ export default function TitleInput({ title, isEditing, onChange, theme }) {
       })}
     >
       {isEditing ? (
-        <Input onChange={onChange} value={title} />
+        <Input onChange={onChange} value={title} placeholder={placeholder} />
       ) : (
         <span
           className={classnames(styles.title, {

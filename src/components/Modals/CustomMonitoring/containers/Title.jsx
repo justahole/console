@@ -36,6 +36,7 @@ export default class Title extends React.Component {
       <TitleInput
         theme={theme}
         title={title}
+        placeholder={t('Please input name')}
         isEditing={isEditing}
         onChange={this.handleChange}
       />

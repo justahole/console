@@ -29,5 +29,10 @@
     .input {
       border: none;
     }
+      
+    .input,
+    .select {
+      max-width: none;
+    }
   }
 }
